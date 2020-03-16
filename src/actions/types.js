@@ -1,1 +1,3 @@
 export const ORDER = 'ORDER';
+export const DELIVERY_DRIVER = 'DELIVERY_DRIVER';
+export const DELIVERY_FINISH = 'DELIVERY_FINISH';

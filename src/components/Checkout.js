@@ -106,8 +106,11 @@ const Checkout = (props) => {
     setActiveStep(activeStep + 1);
   };
 
+  const handleAdmin = () => {
+    props.history.push('/admin');
+  }
+
   React.useEffect(() => {
-    console.log(props.orderState)
     setOrderId(props.orderState.newOrder===undefined ? null : props.orderState.newOrder._id);
   }, [Object.keys(props.orderState).length]);
 
@@ -139,7 +142,6 @@ const Checkout = (props) => {
                   Thank you for your order.
                 </Typography>
                 <Typography variant="subtitle1">
-                  {console.log(props.orderState)}
                   {
                     orderId===null 
                       ? <LinearProgress />
@@ -211,6 +213,14 @@ const Checkout = (props) => {
                 </React.Fragment>
 
                 <div className={classes.buttons}>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={handleAdmin}
+                    className={classes.button}
+                  >
+                    Admin
+                  </Button>
                   <Button
                     variant="contained"
                     color="primary"
