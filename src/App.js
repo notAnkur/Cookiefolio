@@ -13,8 +13,6 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Checkout} />
-          <Route path="/checkout" component={Checkout} />
-          {/* <Route component={PageNotFound} /> */}
         </Switch>
       </Router>
     </Provider>
