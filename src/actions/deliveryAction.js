@@ -2,7 +2,7 @@ import { DELIVERY_DRIVER, DELIVERY_FINISH } from './types.js';
 
 export const getDeliveryDrivers = () => dispatch => {
 	console.log('calling action')
-	fetch('http://localhost:8006/delivery', {
+	fetch('https://api.cookiefolio.ankuranant.dev/delivery', {
 		method: 'GET',
 		headers: {
 			'content-type': 'application/json'
@@ -19,7 +19,7 @@ export const getDeliveryDrivers = () => dispatch => {
 
 export const finishDelivery = (deliveryPersonId, handleCardRefresh) => dispatch => {
 	console.log('calling finishDelivery action')
-	fetch('http://localhost:8006/delivery', {
+	fetch('https://api.cookiefolio.ankuranant.dev/delivery', {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/json'

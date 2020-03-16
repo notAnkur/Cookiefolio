@@ -2,7 +2,7 @@ import { ORDER } from './types.js';
 
 export const order = (orderData) => dispatch => {
 	console.log('calling action')
-	fetch('http://localhost:8006/order', {
+	fetch('https://api.cookiefolio.ankuranant.dev/order', {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/json'
